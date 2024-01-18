@@ -35,6 +35,9 @@ public class UserView {
                         throw new RuntimeException(e);
                     }
                     break;
+                case LIST:
+                    System.out.println(userController.readAll());
+                    break;
                 case UPDATE:
                     String userId = prompt("Enter user id: ");
                     userController.updateUser(userId, createUser());
